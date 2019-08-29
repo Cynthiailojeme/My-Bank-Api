@@ -18,7 +18,7 @@ const AccountSchema = mongoose.Schema({
         required: true
     },
     age:{
-        type: Number,
+        type: String,
         required: true
     },
     email:{
@@ -30,7 +30,7 @@ const AccountSchema = mongoose.Schema({
         required: true
     },
     cardNumber:{
-        type: Number,
+        type: String,
         required: true
     },
     created_at: {

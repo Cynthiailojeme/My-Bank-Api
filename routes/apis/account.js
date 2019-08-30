@@ -24,7 +24,6 @@ router.get('/single/:id', (req, res, next) => {
 
 // Create a bank account
 router.post('/createnew', (req, res, next) => {
-    const id = req.body.id;
     const image = req.body.image;
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
@@ -33,7 +32,6 @@ router.post('/createnew', (req, res, next) => {
     const accountType = req.body.accountType;
     const cardNumber = req.body.cardNumber;
     newAccount = new Account({
-        id: id,
         image: image,
         firstname: firstname,
         lastname: lastname,
@@ -56,7 +54,6 @@ router.put('/edit/:id', (req, res, next) => {
     // find the bank account by id from the databasse
         Account.findById(id)
         .then(account => {
-            account.id = req.body.id;
             account.image = req.body.image;
             account.firstname = req.body.firstname;
             account.lastname = req.body.lastname;

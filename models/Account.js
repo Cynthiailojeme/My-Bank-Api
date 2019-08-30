@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
 const AccountSchema = mongoose.Schema({
-    id:{
-        type: String,
-        required: true
-    },
     image:{
         type: String,
         required: true
